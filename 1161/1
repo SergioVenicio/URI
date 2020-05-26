@@ -1,0 +1,29 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+
+	for scanner.Scan() {
+
+		text := strings.Split(scanner.Text(), " ")
+		n, err := strconv.ParseInt(text[0], 10, 64)
+		n2, err := strconv.ParseInt(text[1], 10, 64)
+		fmt.Printf("%d", factorial(n)+factorial(n2))
+	}
+}
+
+func factorial(n int64) int64 {
+	if n == 0 {
+		return 1
+	}
+
+	return n * factorial(n-1)
+}

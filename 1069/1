@@ -1,0 +1,46 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func GetDiamond(line []byte) ([]byte, bool) {
+	initial_index, final_index := 0, 0
+	aux := false
+
+	for index, char := range line {
+		if char == '<' && aux == false {
+			initial_index = index
+		} else if char != '>' && aux {
+			final_index = index
+		} else if char == '.' {
+			aux = true
+		}
+	}
+
+	var new_line []byte
+
+	for i, char := range line {
+		if i <= initial_index || i >= final_index {
+			continue
+		} else {
+			new_line = append(new_line, char)
+		}
+	}
+
+	return new_line, aux
+}
+
+func main() {
+	var counter int
+	var diamonds int
+	reader := bufio.NewReader(os.Stdin)
+
+	fmt.Scanf("%d", &counter)
+
+	for i := counter; i > 0; i-- {
+		line, _, _ := reader.ReadLine()
+	}
+}

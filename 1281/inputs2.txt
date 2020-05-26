@@ -1,0 +1,13 @@
+1
+5
+uva  2.50
+banana 4.00
+mamao 2.10
+limao 6.00
+laranja 5.00
+5
+uva 10
+banana 10
+mamao 15
+limao 12
+laranja 18

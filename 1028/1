@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+	var cases int
+	var ric, vic int
+	
+
+	for i := cases; i >= 0; i-- {
+		scanf("%d %d", ric, vic)
+
+		if ric % vic == 0 {
+			fmt.Println(vic)
+		} else {
+			for ric % vic != 0 {
+				rest := ric % vic
+				ric, vic = vic, rest
+			}
+			fmt.Println(rest)
+		}
+	}
+}
