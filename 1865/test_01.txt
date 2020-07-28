@@ -1,0 +1,11 @@
+10
+Joao 10
+Vitor 50
+Trinta 400
+Thor 100
+Hulk 10000
+Thor 1
+Feijao 40
+Noway 12424
+Gideon 2135
+None 939
